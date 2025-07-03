@@ -4,7 +4,7 @@
   "semi": false,
   "printWidth": 100,
   "trailingComma": "none",
-  "endOfLine": "lf",
+  "endOfLine": "auto",
   "arrowParens": "avoid",
   "bracketSpacing": true
 }
