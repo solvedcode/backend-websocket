@@ -14,6 +14,13 @@ export class AppController {
     return this.appService.getHello()
   }
 
+  @Get('guests')
+  getGuests() {
+    const connections = this.websocketServer.getConnections()
+    const guests = connections.filter(conn => conn.userId === null)
+    return guests.length
+  }
+
   @Post('send-message')
   sendMessage(@Body() request: SendMessageRequestDto): void {
     const message = {
